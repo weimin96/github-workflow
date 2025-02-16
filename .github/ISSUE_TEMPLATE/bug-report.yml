@@ -1,0 +1,43 @@
+# bug 提交模板
+name: Bug Report
+description: 报告代码中的错误
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        在创建bug报告之前，请仔细阅读bug贡献文档
+        👉 https://github.com/weimin96/github-workflow/docs/reporting-bugs
+  - type: markdown
+    attributes:
+      value: |
+        在提交bug之前，请确认你已经读过我们的 [文档](https://github.com/weimin96/github-workflow/README.md)
+  - type: textarea
+    id: env
+    attributes:
+      label: 系统环境
+      description: 将你的系统环境粘贴出来
+      placeholder: |
+        - 操作系统: `Win11`
+        - Version: `v1.0`
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 描述
+      description: 对错误的清晰简洁的描述。如果您打算为此问题提交PR，请在描述中告诉我们。
+    validations:
+      required: true
+  - type: textarea
+    id: additonal
+    attributes:
+      label: 附加信息
+      description: 如果适用，请在此处添加任何其他上下文或屏幕截图。
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志
+      description: |
+        请尽量不要插入图像，请复制粘贴日志文本。
+      render: shell-script
