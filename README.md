@@ -11,13 +11,27 @@
 - `feature/*`: 新功能开发分支（例：`feature/user-auth`）
 - `release/*`: 预发布分支（例：`release/v1.2.0`），用于测试和修复
 
-### Issue 分类与模板
+### Issue 管理
+
+**分类与模板**
 
 - [bug报告模板](https://github.com/weimin96/github-workflow/blob/main/.github/ISSUE_TEMPLATE/bug-report.yml)
 - [功能请求](https://github.com/weimin96/github-workflow/blob/main/.github/ISSUE_TEMPLATE/feature-request.md)
+
+**自动关闭陈旧issue**
+
+[Close stale issues工作流](https://github.com/weimin96/github-workflow/blob/main/.github/workflowsE/close-stale-issues.yml)
 
 ### PR 流程
 
 - 使用 PR 模板（创建 [.github/PULL_REQUEST_TEMPLATE.md](https://github.com/weimin96/github-workflow/tree/main/.github/PULL_REQUEST_TEMPLATE.md)）
 - 通过 CI/CD 检查（测试、代码规范）
 - 至少 1 名 Reviewer 批准
+
+### 分支保护规则
+
+### 工作流
+
+- CI脚本
+- 自动发布
+- 合并changelog

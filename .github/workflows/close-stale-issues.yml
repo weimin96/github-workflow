@@ -1,0 +1,30 @@
+name: Close stale issues
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 0 点运行
+
+permissions:
+  contents: write # only for delete-branch option
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          # 排除特定标签的 Issue
+          exempt-issue-labels: pending
+          # 在多少天无活动后将问题标记为陈旧
+          days-before-stale: 30
+          # 在多少天后关闭陈旧的问题
+          days-before-close: 7
+          # 陈旧问题的消息，当问题被标记为陈旧时，会自动添加这条评论
+          stale-issue-message: "此问题已超过30天无活动，将于7天后自动关闭。"
+          # 关闭问题时的消息，当问题因无活动而关闭时，会自动添加这条评论
+          close-issue-message: "由于长期无活动，问题已关闭。"
+          # 每次运行时最多操作的问题数量，此处设置为最多操作 200 个问题。如果问题数量超过 200，则会分批处理
+          operations-per-run: 200
+          # 设置拉取请求（PR）变为陈旧的天数，设置为 -1 表示不对拉取请求进行陈旧标记管理
+          days-before-pr-stale: -1
