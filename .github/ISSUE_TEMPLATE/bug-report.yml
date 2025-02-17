@@ -7,11 +7,11 @@ body:
     attributes:
       value: |
         在创建bug报告之前，请仔细阅读bug贡献文档
-        👉 https://github.com/weimin96/github-workflow/docs/reporting-bugs
+        👉 https://github.com/weimin96/github-workflow/blob/main/docs/reporting-bugs/README.md
   - type: markdown
     attributes:
       value: |
-        在提交bug之前，请确认你已经读过我们的 [文档](https://github.com/weimin96/github-workflow/README.md)
+        在提交bug之前，请确认你已经读过我们的 [文档](https://github.com/weimin96/github-workflow/blob/main/README.md)
   - type: textarea
     id: env
     attributes:
