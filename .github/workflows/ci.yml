@@ -1,15 +1,15 @@
-name: ci
+name: CI
 
 on:
   push:
     branches:
       - main
-      - feature/*
   pull_request:
     branches:
       - main
     paths-ignore:
       - "README.md"
+  workflow_dispatch:
 
 jobs:
   ubuntu:
@@ -18,3 +18,31 @@ jobs:
       COREPACK_DEFAULT_TO_LATEST: 0
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: |
+          npm i -g docsify-cli
+          docsify init ./docs
+      # 发布 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+      # 打包项目
+#      - name: Create a zip file
+#        run: |
+#          mkdir release
+#          cp * ./release/
+#          zip -r release/README.zip release/
+      # 发布Release
+      - name: Update Release Drafter
+        if: ${{ github.ref == 'refs/heads/main' && success() }}
+        id: last_release
+        uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release Version Info
+        run:
+          echo "Release version is:" ${{ steps.last_release.outputs.tag_name }}
