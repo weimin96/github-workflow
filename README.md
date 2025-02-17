@@ -39,7 +39,8 @@
 ### 发布新版本
 
 ```bash
-
+git tag -a v1.2.0 -m "Release v1.2.0"  # 语义化版本（SemVer）
+git push origin --tags
 ```
 
 ### 其他
