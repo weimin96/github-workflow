@@ -38,10 +38,6 @@
 
 ### 发布新版本
 
-```bash
-
-```
-
 ### 其他
 
 自动生成文件，如：LICENSE、CONTRIBUTING.md、CODE_OF_CONDUCT.md 和 SECURITY.md

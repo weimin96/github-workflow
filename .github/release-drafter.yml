@@ -1,6 +1,10 @@
 name-template: 'v$NEXT_MINOR_VERSION 🌈'
 tag-template: 'v$NEXT_MINOR_VERSION'
 
+template: |
+  ## 变更日志 👀
+
+  $CHANGES
 categories:
   - title: 🚀 主要功能和改进
     labels:
@@ -16,6 +20,10 @@ categories:
   - title: 📝 文档更新
     labels:
       - 'documentation'
+  - title: 🧪 测试
+    labels:
+      - 'test'
+  - title: 📝 其他变更
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'
 version-resolver:
@@ -29,7 +37,3 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
-template: |
-  ## 变更日志
-
-  $CHANGES
