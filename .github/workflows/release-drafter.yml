@@ -1,11 +1,13 @@
 name: Release Drafter
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
-    types: [opened, reopened, synchronize]
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
 
 permissions:
   contents: read
@@ -18,5 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
+        with:
+          config-name: release-drafter.yml
+          disable-releaser: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

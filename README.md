@@ -35,3 +35,9 @@
 - CI脚本
 - 自动发布
 - 合并changelog
+
+### 发布新版本
+
+### 其他
+
+自动生成文件，如：LICENSE、CONTRIBUTING.md、CODE_OF_CONDUCT.md 和 SECURITY.md
