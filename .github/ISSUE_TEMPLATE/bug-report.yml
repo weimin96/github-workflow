@@ -1,5 +1,5 @@
 # bug 提交模板
-name: Bug Report
+name: 🐞 Bug Report
 description: 报告代码中的错误
 labels: ["bug"]
 body:

@@ -1,0 +1,28 @@
+
+name-template: v$NEXT_MINOR_VERSION 🌈
+tag-template: v$NEXT_MINOR_VERSION
+version-template: $MAJOR.$MINOR.$PATCH
+
+categories:
+  - title: 🎉 主要功能和改进
+    labels:
+      - feature
+      - feat
+  - title: 🐛 Bug 修复
+    labels:
+      - bug
+      - fix
+      - bugfix
+  - title: 📝 文档更新
+    labels:
+      - docs
+exclude-labels:
+  - reverted
+  - no-changelog
+  - skip-changelog
+  - invalid
+change-template: '* $TITLE (#$NUMBER) @$AUTHOR'
+template: |
+  ## 变更日志
+  
+  $CHANGES
