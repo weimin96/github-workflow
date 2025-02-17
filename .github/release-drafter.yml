@@ -1,28 +1,36 @@
 
-name-template: v$NEXT_MINOR_VERSION 🌈
-tag-template: v$NEXT_MINOR_VERSION
-version-template: $MAJOR.$MINOR.$PATCH
+name-template: 'v$NEXT_MINOR_VERSION 🌈'
+tag-template: 'v$NEXT_MINOR_VERSION'
 
 categories:
-  - title: 🎉 主要功能和改进
+  - title: 🚀 主要功能和改进
     labels:
-      - feature
-      - feat
+      - 'feature'
+      - 'enhancement'
   - title: 🐛 Bug 修复
     labels:
-      - bug
-      - fix
-      - bugfix
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '🧰 维护'
+    label: 'chore'
   - title: 📝 文档更新
     labels:
-      - docs
-exclude-labels:
-  - reverted
-  - no-changelog
-  - skip-changelog
-  - invalid
-change-template: '* $TITLE (#$NUMBER) @$AUTHOR'
+      - 'documentation'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&'
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
 template: |
   ## 变更日志
-  
+
   $CHANGES
