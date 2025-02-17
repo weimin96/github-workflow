@@ -15,7 +15,7 @@
 **1. 验证问题类型**
 - 确认是否已阅读项目文档和FAQ
 - 区分功能咨询与代码缺陷：
-    - 需要功能帮助 → [获取支持指南](./getting-help)
+    - 需要功能帮助 → [获取支持指南](https://github.com/weimin96/github-workflow/blob/main/docs/getting-help/README.md)
     - 发现异常行为 → 继续报告流程
 
 **2. 问题查重步骤**
