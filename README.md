@@ -80,7 +80,7 @@ git push
 
 以上标签需要与`pull request`时勾选的标签对应上
 
-<img src="./docs/image/pr-labels.png" width="50%" alt="pr label">
+<img src="https://raw.githubusercontent.com/weimin96/github-workflow/refs/heads/main/docs/image/pr-labels.png" width="50%" alt="pr label">
 
 2. 编写[ci脚本](https://github.com/weimin96/github-workflow/blob/main/.github/workflows/ci.yml)
 
@@ -120,9 +120,9 @@ on:
 
 Actions=> General=>Workflow permisssion=> Read and Write permissions
 
-<img src="./docs/image/setting-action-1.png" width="70%" alt="setting-action-1">
+<img src="https://raw.githubusercontent.com/weimin96/github-workflow/refs/heads/main/docs/image/setting-action-1.png" width="70%" alt="setting-action-1">
 
-<img src="./docs/image/setting-action-2.png" width="70%" alt="setting-action-2">
+<img src="https://raw.githubusercontent.com/weimin96/github-workflow/refs/heads/main/docs/image/setting-action-2.png" width="70%" alt="setting-action-2">
 
 3. 推送tag
 
@@ -149,7 +149,7 @@ docsify init ./docs
 
 3. 配置github-pages
 
-<img src="./docs/image/github-pages.png" width="70%" alt="github-pages">
+<img src="https://raw.githubusercontent.com/weimin96/github-workflow/refs/heads/main/docs/image/github-pages.png" width="70%" alt="github-pages">
 
 4. 提交后等待片刻即可查看部署的网页
 
