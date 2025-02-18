@@ -6,7 +6,7 @@ template: |
 
   $CHANGES
 categories:
-  - title: 🚀 主要功能和改进
+  - title: 🚀 功能和改进
     labels:
       - 'feature'
       - 'enhancement'
@@ -17,14 +17,14 @@ categories:
       - 'bug'
   - title: '🧰 维护'
     label: 'chore'
-  - title: 📝 文档更新
+  - title: 📖 文档
     labels:
       - 'documentation'
   - title: 🧪 测试
     labels:
       - 'test'
-  - title: 📝 其他变更
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+  - title: 📝 其他
+change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&'
 version-resolver:
   major:
