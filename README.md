@@ -34,7 +34,7 @@
 👉[release drafter官方文档](https://github.com/marketplace/actions/release-drafter)
 
 ```yml
-- title: 🚀 主要功能和改进
+- title: 🚀 功能和改进
   labels:
     - 'feature'
     - 'enhancement'
@@ -45,13 +45,13 @@
     - 'bug'
 - title: '🧰 维护'
   label: 'chore'
-- title: 📝 文档更新
+- title: 📖 文档
   labels:
     - 'documentation'
 - title: 🧪 测试
   labels:
     - 'test'
-- title: 📝 其他变更
+- title: 📝 其他
 ```
 
 以上标签需要与`pull request`时勾选的标签对应上
