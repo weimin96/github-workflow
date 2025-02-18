@@ -6,10 +6,34 @@
 
 ### 分支管理
 
-- `main`/`master`: 仅存放稳定生产环境代码，**禁止直接提交**，只能通过 PR 合并
+- `main`/`master`: 仅存放稳定生产环境代码，一般只能通过 PR 合并
 - `develop`: 日常开发分支，所有功能分支合并到此分支
 - `feature/*`: 新功能开发分支（例：`feature/user-auth`）
 - `release/*`: 预发布分支（例：`release/v1.2.0`），用于测试和修复
+
+**场景一：分支开发**
+
+1. 拉取 `main` 分支的最新代码
+```bash
+git pull origin main
+```
+
+2. 切换到要开发的分支
+```bash
+git checkout develop
+```
+
+3. 合并 `main` 分支
+```bash
+git merge main
+```
+
+4. 解决冲突并提交
+```bash
+git add .
+git commit -m "XXX"
+git push
+```
 
 ### Issue 管理
 
